@@ -4,6 +4,8 @@ import axios from "axios";
 function App() {
     const [query, setQuery] = useState("");
     const [response, setResponse] = useState("");
+    const BACKEND_URL = "https://intelligent-law-backend.onrender.com";
+
 
     const handleAsk = async () => {
         const res = await axios.post("http://localhost:5000/ask", { query });
